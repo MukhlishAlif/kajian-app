@@ -18,9 +18,76 @@
     --foreground: #ededed;
   }
 }
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/fonts/mona-sans/MonaSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100 900; /* variable font range */
+  font-stretch: 75% 125%; /* handles condensed/expanded */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/fonts/mona-sans/MonaSans-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: italic;
+}
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Mona Sans", Arial, Helvetica, sans-serif;
+}
+
+/* text */
+.head-primary{
+  @apply text-slate-50 text-2xl;
+}
+.head-secondary{
+  @apply text-neutral-400 text-2xl;
+}
+.body-primary{
+  @apply text-slate-50;
+}
+.body-secondary{
+  @apply text-neutral-400
+}
+
+/* container */
+.container-primary{ 
+  @apply bg-black;
+}
+.container-secondary{ 
+  @apply bg-neutral-950 border border-neutral-900 shadow-neutral-900 shadow-sm;
+}
+
+/* button */
+.button-primary{
+  @apply bg-neutral-700 text-neutral-400 rounded-md px-4 py-2 font-medium hover:bg-neutral-800 hover:text-slate-50 text-sm;
+}
+.button-secondary{
+  @apply  bg-black text-neutral-400 rounded-lg px-2 py-1 font-medium border border-neutral-800 hover:bg-neutral-800 hover:text-slate-50 text-sm;
+}
+.button-secondary-danger{
+  @apply bg-black text-neutral-400 rounded-lg px-2 py-1 font-medium border border-neutral-800 hover:bg-rose-700 hover:text-slate-50 hover:border-rose-700 text-sm;
+}
+.button-badge{
+  @apply bg-black text-neutral-400 rounded-lg p-1 font-medium border border-neutral-800 hover:bg-neutral-800 hover:text-slate-50 text-sm;
+}
+.button-badge-danger{
+  @apply bg-black text-neutral-400 rounded-lg p-1 font-medium border border-neutral-800 hover:bg-rose-700 hover:text-slate-50 text-sm;
+}
+/* input */
+.checkbox-primary{
+  @apply border border-neutral-500 rounded-sm w-3 h-3
+}
+.input-field{
+  @apply  rounded-md px-4 py-2 focus:outline-none text-neutral-500 bg-neutral-50 w-full text-sm p-2
+}
+.input-field-search{
+  @apply  rounded-md px-2 py-1 focus:outline-none text-neutral-400 w-80 p-2 bg-black
+}
+.divider-horizontal{
+  @apply h-[1px] w-full bg-neutral-800
 }
