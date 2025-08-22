@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import CashSummaryCard from "@/components/common/CashSummaryCard";
+import SummaryCard from "@/components/common/CashSummaryCard";
 import AlertMessage from "@/components/common/AlertMessage";
 import TransactionTable from "@/components/transaction/TransactionTable";
 import { FileDown, FileUp } from "lucide-react";
@@ -13,7 +13,7 @@ type Transaction = {
     detail: string;
 };
 
-export default function TransactionPage() {
+export default function UsersPage() {
     const transactions: Transaction[] = [
         { id: "1", type: "income", amount: 200000, category: "Penjualan Produk", date: "2025-08-15", detail: "Detail transaksi" },
         { id: "2", type: "expense", amount: 50000, category: "Biaya Operasional", date: "2025-08-16", detail: "Detail transaksi" },
@@ -34,9 +34,9 @@ export default function TransactionPage() {
 
                 {/* summary cards */}
                 <div className="flex flex-row gap-4 mb-8">
-                    <CashSummaryCard title="Total Pendapatan" amount={1250000} />
-                    <CashSummaryCard title="Total Pengeluaran" amount={850000} />
-                    <CashSummaryCard title="Saldo Bersih" amount={400000} />
+                    <SummaryCard title="Total Pendapatan" amount={1250000} />
+                    <SummaryCard title="Total Pengeluaran" amount={850000} />
+                    <SummaryCard title="Saldo Bersih" amount={400000} />
                 </div>
 
                 {/* divider + action buttons */}

@@ -18,9 +18,9 @@ const data: DataPoint[] = [
 
 export default function Chart() {
     return (
-        <div className="w-full h-80 shadow-lg p-4">
+        <div className="flex flex-col flex-grow w-full h-full shadow-lg">
             <h2 className="text-xl font-semibold body-secondary mb-4">Grafik Keuangan</h2>
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" minHeight={184}>
                 <LineChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#444" />
                     <XAxis

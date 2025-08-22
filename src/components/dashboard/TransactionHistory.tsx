@@ -4,6 +4,7 @@ type Transaction = {
   amount: number;
   category: string;
   date: string;
+  detail: string;
 };
 
 export default function TransactionItem({ tx }: { tx: Transaction }) {
